@@ -18,7 +18,7 @@ jobs:
         run: |
           git config --local user.email "jiong-lin@live.com"
           git config --local user.name "klmmlk"
-          git remote set-url origin https://${{ github.actor }}:${{ secrets.HUB_TOKEN }}@github.com/${{ github.repository }}
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
           git commit --allow-empty -m "Keep writing documents now..."
           git push
